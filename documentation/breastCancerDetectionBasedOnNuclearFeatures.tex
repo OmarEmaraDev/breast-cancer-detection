@@ -399,8 +399,8 @@ Negative & 1 & 77 \\
 \bottomrule
 \end{tabular}
 \end{center}
-\caption{The binary confusion matrix for the cross validation split
-  corresponding to the median validation binary accuracy.}
+\caption{The neural network binary confusion matrix for the cross validation
+  split corresponding to the median validation binary accuracy.}
 \label{tab:NeuralNetworkConfusionMatrix}
 \end{table}
 
@@ -412,12 +412,13 @@ Negative & 1 & 77 \\
     xlabel = False Positive Rate,
     ylabel = True Positive Rate,
   ]
-    \addplot table[x = falsePositiveRate, y = truePositiveRate] {roc.dat};
+    \addplot table[x = falsePositiveRate, y = truePositiveRate]
+      {neuralNetworkROC.data};
   \end{axis}
 \end{tikzpicture}
 \end{center}
-\caption{The binary ROC curve for the cross validation split corresponding to
-  the median validation binary accuracy.}
+\caption{The neural network binary ROC curve for the cross validation split
+  corresponding to the median validation binary accuracy.}
 \label{fig:NeuralNetworkROC}
 \end{figure}
 
@@ -429,12 +430,12 @@ Negative & 1 & 77 \\
     xlabel = Epoch,
     ylabel = Loss,
   ]
-    \addplot table[x expr = \coordindex, y = loss] {loss.dat};
+    \addplot table[x expr = \coordindex, y = loss] {neuralNetworkLoss.data};
   \end{axis}
 \end{tikzpicture}
 \end{center}
-\caption{The loss curve for the cross validation split corresponding to the
-  median validation binary accuracy.}
+\caption{The neural network loss curve for the cross validation split
+  corresponding to the median validation binary accuracy.}
 \label{fig:NeuralNetworkLoss}
 \end{figure}
 

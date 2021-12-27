@@ -119,8 +119,9 @@ print(f"False Negative: {confusionMatrix[2]}")
 print(f"True Positive: {confusionMatrix[3]}")
 
 rocCurve = rocCurves[medianIndex]
-numpy.savetxt("documentation/roc.dat", numpy.column_stack(rocCurve), comments = "",
-        header = "falsePositiveRate truePositiveRate threshold")
+numpy.savetxt("documentation/neuralNetworkROC.data", numpy.column_stack(rocCurve),
+        comments = "", header = "falsePositiveRate truePositiveRate threshold")
 
 lossCurve = lossCurves[medianIndex]
-numpy.savetxt("documentation/loss.dat", lossCurve, comments = "", header = "loss")
+numpy.savetxt("documentation/neuralNetworkLoss.data", lossCurve, comments = "",
+        header = "loss")
